@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def say_hello(request):
-    return HttpResponse('hello majid')
+    person={'name':'majid','age':35}
+    return render(request,'index.html',context=person)
 # Create your views here.
