@@ -1,13 +1,9 @@
 {%  extends 'base.html' %}
+{% block title %}majid{% endblock %}
 {% block content  %}
-<h3>first page</h3>
-{%  endblock %}
-{% block db %}
     {%  for todo in info %}
         <h3>{{ todo.title }}</h3>
-
         <smal>{{ todo.created }}</smal>
         <p>{{ todo.body }}</p>
-
     {% endfor %}
-{% endblock %}
+{%  endblock %}
