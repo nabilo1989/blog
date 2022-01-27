@@ -7,6 +7,11 @@
     {% else %}
         <h2>Please Login</h2>
     {% endif %}
+    <a href="{% url 'user_register' %}">Register</a>
+    <a href="{% url 'user_login' %}">Login</a>
+    <a href="{% url 'user_logout' %}">Logout</a>
+
+
     <div class="card">
 
         {%  for todo in info %}
