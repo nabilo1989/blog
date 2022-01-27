@@ -40,6 +40,10 @@ def update(request, todo_id):
         form= TodoUpdateForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'To do updated succsess', 'success')
+            return redirect('delete',todo_id)
+
+
     else:
         form = TodoUpdateForm(instance=todo)
     return render(request, 'update.html', {'form': form})
