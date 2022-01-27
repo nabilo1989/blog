@@ -1,6 +1,12 @@
 {%  extends 'base.html' %}
 {% block title %}majid{% endblock %}
 {% block content  %}
+    <p>{{ request.user.first_name}}</p>
+    {% if request.user.is_authenticated %}
+        <h2>Hello</h2>
+    {% else %}
+        <h2>Please Login</h2>
+    {% endif %}
     <div class="card">
 
         {%  for todo in info %}
