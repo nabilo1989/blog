@@ -3,7 +3,6 @@ from .models import Todo
 from django.contrib import messages
 from .forms import TodoCreateForm, TodoUpdateForm
 
-
 def say_hello(request):
     all = Todo.objects.all()
     return render(request, 'index.html', {'info': all})
