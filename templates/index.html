@@ -1,8 +1,11 @@
 {%  extends 'base.html' %}
 {% block title %}majid{% endblock %}
 {% block content  %}
-    {%  for todo in info %}
-        <a href="/detail/{{ todo.id }}" >{{ todo.title }}</a><br>
+    <div class="card">
+        {%  for todo in info %}
+            <a  class="card-body" href="/detail/{{ todo.id }}" >{{ todo.title }}</a><br>
 
-    {% endfor %}
+        {% endfor %}
+    </div>
+
 {%  endblock %}
