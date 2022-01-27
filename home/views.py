@@ -37,11 +37,11 @@ def create(request):
 def update(request, todo_id):
     todo=Todo.objects.get(id=todo_id)
     if request.method == 'POST':
-        form= TodoUpdateForm(request.POST)
+        form= TodoUpdateForm(request.POST,instance=todo)
         if form.is_valid():
             form.save()
             messages.success(request, 'To do updated succsess', 'success')
-            return redirect('delete',todo_id)
+            return redirect('detail',todo_id)
 
 
     else:
