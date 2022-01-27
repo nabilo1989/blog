@@ -2,7 +2,7 @@
 {% block title %} detail {% endblock %}
 {% block content %}
         <a href="{% url 'delete' todo.id %}" class="btn btn-danger">Delete</a>
-        <a href=""class="btn btn-info">Edit</a>
+        <a href="{% url 'update' todo.id %}"class="btn btn-info">update</a>
 
         <h3>{{ todo.title }}</h3>
         <smal>{{ todo.created }}</smal><hr/>
